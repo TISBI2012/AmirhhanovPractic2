@@ -1,0 +1,22 @@
+﻿<Page x:Class="Lesson2.Pages.AddEditTaskPage"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      Title="AddEditTaskPage">
+    <Grid Background="#F0F0F0">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+        </Grid.RowDefinitions>
+
+        <TextBox Grid.Row="0" Text="{Binding Description, Mode=TwoWay}" Margin="5" Height="40"/>
+        <ComboBox Grid.Row="1" x:Name="ImportanceComboBox" DisplayMemberPath="Name" SelectedValuePath="Id" SelectedValue="{Binding ImportanceId, Mode=TwoWay}" Margin="5" Height="40"/>
+        <DatePicker Grid.Row="2" SelectedDate="{Binding Deadline, Mode=TwoWay}" Margin="5" Height="40"/>
+        <CheckBox Grid.Row="3" IsChecked="{Binding IsCompleted, Mode=TwoWay}" Content="Выполнена" Margin="5"/>
+        <Button Grid.Row="4" Content="Сохранить" Click="Save_Click" Margin="5" Height="40" Background="#2196F3" Foreground="White"/>
+        <Button Grid.Row="5" Content="Вернуться к задачам" Click="ReturnToTasks_Click" Margin="5" Height="40" Background="#FFC107" Foreground="Black"/>
+    </Grid>
+</Page>

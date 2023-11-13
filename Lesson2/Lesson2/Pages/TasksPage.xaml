@@ -1,0 +1,15 @@
+﻿<Page x:Class="Lesson2.Pages.TasksPage"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      Title="TasksPage">
+    <Grid Background="#F0F0F0">
+        <DataGrid x:Name="TasksDataGrid" AutoGenerateColumns="False" CanUserAddRows="False" IsReadOnly="True" Margin="10">
+            <DataGrid.Columns>
+                <DataGridTextColumn Header="Описание" Binding="{Binding Description}" Width="*"/>
+                <DataGridTextColumn Header="Важность" Binding="{Binding Importance.Name}" Width="*"/>
+                <DataGridTextColumn Header="Дедлайн" Binding="{Binding Deadline}" Width="*"/>
+                <DataGridCheckBoxColumn Header="Выполнена" Binding="{Binding IsCompleted}" Width="*"/>
+            </DataGrid.Columns>
+        </DataGrid>
+    </Grid>
+</Page>
